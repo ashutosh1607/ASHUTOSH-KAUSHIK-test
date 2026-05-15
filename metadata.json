@@ -1,0 +1,6 @@
+{
+  "name": "E-commerce Invoice CRM",
+  "description": "A professional CRM for generating and managing e-commerce invoices with customizable branding and print-ready templates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["Invoicing", "Customer Management", "Settings Tracking"]
+}

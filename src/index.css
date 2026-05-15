@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900 bg-gray-50;
+  }
+}
+
+@media print {
+  /* Hide elements not needed for print */
+  aside, 
+  nav, 
+  button, 
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Reset main content layout for print */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .md\:pl-64 {
+    padding-left: 0 !important;
+  }
+
+  .max-w-6xl {
+    max-width: none !important;
+  }
+
+  body {
+    background-color: white !important;
+  }
+
+  /* Ensure background colors and images are printed */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Force page breaks if needed */
+  .page-break {
+    page-break-after: always;
+  }
+}
